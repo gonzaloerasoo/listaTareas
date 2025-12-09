@@ -7,11 +7,12 @@ function TaskItem({ task, onDelete, onToggle }) {
       <div className="task-content">
         <span>{task.text}</span>
       </div>
+
       <div className="task-actions">
-        <button onClick={() => onToggle(task.id)}>
+        <button className="task-btn" onClick={() => onToggle(task.id)}>
           {task.completed ? <FaClock /> : <FaCheck />}
         </button>
-        <button onClick={() => onDelete(task.id)}>
+        <button className="task-btn" onClick={() => onDelete(task.id)}>
           <FaTrash />
         </button>
       </div>
